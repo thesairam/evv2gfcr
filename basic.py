@@ -6,8 +6,8 @@ num_evs = 50
 initial_battery_capacity = 60  # kWh
 max_charge_rate = 10  # kW
 max_discharge_rate = 15  # kW
-grid_frequency = 60.0  # Hz
-target_frequency = 60.1  # Hz
+grid_frequency = 50.0  # Hz
+target_frequency = 50  # Hz
 
 class ElectricVehicle:
     def __init__(self, battery_capacity):
@@ -48,11 +48,11 @@ def simulate_evs():
         print("Grid Frequency:", grid_frequency, "Hz | Grid Imbalance:", grid_imbalance)
         
         # Simulate grid frequency change within a reasonable range
-        grid_frequency += random.uniform(-0.05, 0.05)
-        if grid_frequency < 59.8:
-            grid_frequency = 59.8
-        elif grid_frequency > 60.2:
-            grid_frequency = 60.2
+        grid_frequency += random.gauss(-0.2, 0.2)
+        if grid_frequency < 49.8:
+            grid_frequency = 49.8
+        elif grid_frequency > 50.2:
+            grid_frequency = 50.2
         
         time.sleep(1)
 
