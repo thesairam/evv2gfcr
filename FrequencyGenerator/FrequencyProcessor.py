@@ -16,7 +16,7 @@ import pandas as pd
 # ## Load Data Sets
 
 # Location of the file
-location = r'/home/sairam/projects/evv2gfcr/FrequencyGenerator/FrequencyData/'
+location = r'/home/gayathri/Documents/Projects/evv2gfcr/FrequencyGenerator/FrequencyData'
 # Year
 year = r'2020'
 # Month
@@ -26,7 +26,7 @@ month_index = int(month) - 1
 file_name =  year + '_' + month + '.txt'   #
 
 # location to save file and plot
-save_to = r'/home/sairam/projects/evv2gfcr/FrequencyGenerator/FrequencyData/'+year+'/'+month+'/'
+save_to = r'/home/gayathri/Documents/Projects/evv2gfcr/FrequencyGenerator/FrequencyData/'+year+'/'+month+'/'
 
 # Date ranges
 # Check if leap year
